@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Michael Simmons — Software Developer</title>
+  <meta name="description" content="Portfolio of Michael Simmons: software projects, skills, and contact info.">
+  <meta property="og:title" content="Michael Simmons — Software Developer">
+  <meta property="og:description" content="Software projects, skills, and contact info.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://michaelsimmons2004.github.io/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main">
+      <a class="logo" href="#top">~/michael<span class="cursor">_</span></a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about"><span class="num">01.</span>about</a></li>
+        <li><a href="#projects"><span class="num">02.</span>projects</a></li>
+        <li><a href="#skills"><span class="num">03.</span>skills</a></li>
+        <li><a href="#contact"><span class="num">04.</span>contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero container" id="top">
+      <div class="terminal" aria-hidden="true">
+        <div class="terminal-bar">
+          <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          <span class="terminal-title">bash — michael@portfolio</span>
+        </div>
+        <div class="terminal-body">
+          <p><span class="prompt">$</span> <span class="typed" data-text="whoami"></span></p>
+          <p class="out reveal-line">michael_simmons</p>
+          <p><span class="prompt">$</span> <span class="typed" data-text="cat focus.txt"></span></p>
+          <p class="out reveal-line">python · backend · local AI tooling</p>
+          <p><span class="prompt">$</span> <span class="cursor block">&nbsp;</span></p>
+        </div>
+      </div>
+
+      <div class="hero-text">
+        <p class="eyebrow">Hi, my name is</p>
+        <h1>Michael Simmons.</h1>
+        <p class="tagline">I build software that runs close to the metal &mdash; and close to the user.</p>
+        <p class="lede">
+          I'm a software developer who likes building practical tools end to end: backend services,
+          the UI on top of them, and the glue that makes them reliable. Lately that means running
+          AI models locally instead of in the cloud.
+        </p>
+        <div class="cta">
+          <a class="btn primary" href="#projects">View my work</a>
+          <a class="btn" href="https://github.com/MichaelSimmons2004" target="_blank" rel="noopener">GitHub</a>
+          <!-- Add your resume: drop resume.pdf in this folder, then uncomment the line below. -->
+          <!-- <a class="btn" href="resume.pdf" target="_blank" rel="noopener">Resume</a> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section container" id="about">
+      <h2 class="section-title"><span class="num">01.</span> about_me</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <!-- TODO: Make this yours — school, year, what you're looking for (internship, full-time, etc.). -->
+          <p>
+            I enjoy taking an idea from a blank folder to something people can actually use. Most of my
+            work is in Python, and I'm especially interested in how to make AI assistants that are
+            private, fast, and useful without depending on a third-party API.
+          </p>
+          <p>
+            When I build something, I care about the boring-but-important parts too: clean APIs,
+            sensible configuration, handling failure gracefully, and keeping user data on the user's machine.
+          </p>
+          <p>
+            I'm currently looking for opportunities where I can keep growing as an engineer and ship real software.
+          </p>
+        </div>
+        <ul class="facts">
+          <!-- TODO: Add a location line if you want one, e.g.
+          <li><span class="key">location</span><span class="val">City, State</span></li> -->
+          <li><span class="key">focus</span><span class="val">Backend · AI tooling</span></li>
+          <li><span class="key">main_lang</span><span class="val">Python</span></li>
+          <li><span class="key">status</span><span class="val ok">open to opportunities</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section container" id="projects">
+      <h2 class="section-title"><span class="num">02.</span> projects</h2>
+
+      <div class="projects">
+        <article class="project featured">
+          <div class="project-head">
+            <span class="project-label">Featured project</span>
+            <div class="project-links">
+              <a href="https://github.com/MichaelSimmons2004/Projects/tree/main/Clih%20Bot" target="_blank" rel="noopener" aria-label="CLIHBot source on GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>CLIHBot</h3>
+          <p>
+            A desktop AI assistant that runs entirely on your own machine. A Gradio chat UI talks to a
+            FastAPI backend, which manages a local LLM through LM Studio (or any OpenAI-compatible server)
+            and streams responses back. The assistant can look at a region of the screen using OCR and
+            computer vision, and it's extensible through a simple plugin system.
+          </p>
+          <ul class="highlights">
+            <li>Backend auto-starts on demand and auto-detects an already-running model server</li>
+            <li>Screen observation with PyAutoGUI, OpenCV, and Tesseract OCR &mdash; processed locally</li>
+            <li>User settings stored encrypted at rest (Fernet)</li>
+            <li>Session management, prompt templates, and a tool/plugin layer</li>
+          </ul>
+          <ul class="tags">
+            <li>Python</li><li>FastAPI</li><li>Gradio</li><li>LLMs</li><li>LM Studio</li><li>OpenCV</li><li>OCR</li>
+          </ul>
+        </article>
+
+        <!--
+          ===== Add another project: copy this block, remove the comment markers, and fill it in. =====
+          <article class="project">
+            <div class="project-head">
+              <span class="project-label">Project</span>
+              <div class="project-links">
+                <a href="https://github.com/MichaelSimmons2004/REPO" target="_blank" rel="noopener" aria-label="Source on GitHub">GitHub</a>
+                <a href="https://LIVE-DEMO-URL" target="_blank" rel="noopener" aria-label="Live demo">Demo</a>
+              </div>
+            </div>
+            <h3>Project name</h3>
+            <p>One or two sentences: what it does, who it's for, and what you built.</p>
+            <ul class="highlights">
+              <li>Something technically interesting you did</li>
+              <li>A result or number if you have one</li>
+            </ul>
+            <ul class="tags"><li>Tech</li><li>Stack</li></ul>
+          </article>
+        -->
+
+        <article class="project">
+          <div class="project-head">
+            <span class="project-label">This site</span>
+            <div class="project-links">
+              <a href="https://github.com/MichaelSimmons2004/MichaelSimmons2004.github.io" target="_blank" rel="noopener" aria-label="Portfolio source on GitHub">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
+              </a>
+            </div>
+          </div>
+          <h3>Personal portfolio</h3>
+          <p>
+            The site you're looking at: hand-written HTML, CSS, and a little JavaScript, no framework.
+            Responsive, accessible, and deployed automatically with GitHub Pages on every push.
+          </p>
+          <ul class="tags"><li>HTML</li><li>CSS</li><li>JavaScript</li><li>GitHub Pages</li></ul>
+        </article>
+      </div>
+
+      <p class="more">
+        More on my <a href="https://github.com/MichaelSimmons2004" target="_blank" rel="noopener">GitHub profile &rarr;</a>
+      </p>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section container" id="skills">
+      <h2 class="section-title"><span class="num">03.</span> skills</h2>
+      <!-- TODO: Edit these lists to match what you actually know. -->
+      <div class="skills">
+        <div class="skill-group">
+          <h3>languages</h3>
+          <ul><li>Python</li><li>JavaScript</li><li>HTML / CSS</li><li>SQL</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>backend &amp; AI</h3>
+          <ul><li>FastAPI</li><li>REST APIs</li><li>Local LLMs (LM Studio)</li><li>OpenAI-compatible APIs</li><li>OpenCV / OCR</li></ul>
+        </div>
+        <div class="skill-group">
+          <h3>tools</h3>
+          <ul><li>Git &amp; GitHub</li><li>VS Code</li><li>Gradio</li><li>YAML / config management</li><li>Windows &amp; Linux</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!--
+      ===== Optional: Experience / Education section. Uncomment and fill in. =====
+      Also add  <li><a href="#experience"><span class="num">05.</span>experience</a></li>  to the nav.
+
+    <section class="section container" id="experience">
+      <h2 class="section-title"><span class="num">05.</span> experience</h2>
+      <ol class="timeline">
+        <li>
+          <p class="when">2024 — Present</p>
+          <h3>B.S. Computer Science · University Name</h3>
+          <p>Relevant coursework, GPA, clubs, honors.</p>
+        </li>
+        <li>
+          <p class="when">Summer 2025</p>
+          <h3>Software Engineering Intern · Company</h3>
+          <p>What you built and the impact it had.</p>
+        </li>
+      </ol>
+    </section>
+    -->
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section container contact" id="contact">
+      <h2 class="section-title"><span class="num">04.</span> contact</h2>
+      <p class="contact-lede">
+        I'm open to internships, full-time roles, and interesting projects.
+        The best way to reach me is below &mdash; I'll get back to you.
+      </p>
+      <div class="contact-links">
+        <!-- TODO: Put the email you want recruiters to use, then uncomment. -->
+        <!-- <a class="btn primary" href="mailto:you@example.com">Say hello</a> -->
+        <a class="btn primary" href="https://github.com/MichaelSimmons2004" target="_blank" rel="noopener">GitHub</a>
+        <!-- TODO: Add your LinkedIn URL, then uncomment. -->
+        <!-- <a class="btn" href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a> -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p class="container">
+      <span class="prompt">$</span> echo "&copy; <span id="year">2026</span> Michael Simmons · built from scratch, hosted on GitHub Pages"
+    </p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
