@@ -199,12 +199,12 @@
           <div class="project-head">
             <span class="project-label">Featured · open source</span>
             <div class="project-links">
-              <a href="https://github.com/MichaelSimmons2004/Projects/tree/main/Clih%20Bot" target="_blank" rel="noopener" aria-label="CLIHBot source on GitHub">
+              <a href="https://github.com/MichaelSimmons2004/Projects/tree/main/Clih%20Bot" target="_blank" rel="noopener" aria-label="Hearth source on GitHub">
                 <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.71 1.26 3.37.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.69 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></svg>
               </a>
             </div>
           </div>
-          <h3>CLIHBot</h3>
+          <h3>Hearth</h3>
           <p>
             A desktop AI assistant that runs entirely on your own machine. A Gradio chat UI talks to a
             FastAPI backend, which manages a local LLM through LM Studio (or any OpenAI-compatible server)
@@ -221,15 +221,50 @@
           </ul>
         </article>
 
+        <article class="project featured">
+          <div class="project-head"><span class="project-label">Full-stack · mobile web app</span></div>
+          <h3>LifeCal</h3>
+          <p>
+            A calendar, to-do, and habit app built for my phone and installable as a PWA. It pulls my whole
+            schedule into one place: two-way sync with Google Calendar and Outlook, read-only subscriptions to
+            Canvas, iCloud, or any ICS feed, and Canvas assignments that show up as to-dos before they're due.
+          </p>
+          <ul class="highlights">
+            <li>OAuth sign-in to Google and Microsoft with webhooks, so edits made in either app sync both ways</li>
+            <li>Natural-language quick add: &ldquo;gym every mon wed 7am&rdquo; becomes a repeating event</li>
+            <li>Habits with streaks, weekly review, full-text search, and push-notification reminders</li>
+            <li>Postgres row-level security on every table; unit tests with Vitest and end-to-end tests with Playwright</li>
+          </ul>
+          <ul class="tags">
+            <li>TypeScript</li><li>Next.js</li><li>React</li><li>Supabase</li><li>PostgreSQL</li><li>OAuth</li><li>PWA</li><li>Playwright</li>
+          </ul>
+        </article>
+
         <article class="project">
-          <div class="project-head"><span class="project-label">AI · in progress</span></div>
+          <div class="project-head"><span class="project-label">Research · ongoing</span></div>
+          <h3>Large-Model Inference on Consumer GPUs</h3>
+          <p>
+            An independent research project on running large language models on home hardware. It runs models
+            far bigger than the GPU's memory at their original precision. In my evaluation it matched the full
+            model's score on the HumanEval coding benchmark.
+          </p>
+          <ul class="highlights">
+            <li>Roughly 230 experiments on one workstation</li>
+            <li>Inference engine with custom GPU kernels and a test suite checked against a reference implementation</li>
+          </ul>
+          <p class="note">Code is private while the research is in progress.</p>
+          <ul class="tags"><li>Python</li><li>PyTorch</li><li>GPU kernels</li><li>LLM inference</li></ul>
+        </article>
+
+        <article class="project">
+          <div class="project-head"><span class="project-label">AI · team project</span></div>
           <h3>Celeste Vision AI</h3>
           <p>
-            A CNN-based agent that plays the 2D platformer <em>Celeste</em> from raw screen pixels. It runs a
-            perception-to-action loop &mdash; observe the frame, infer, act &mdash; in real time, the same structure
-            used in autonomous vehicle control.
+            A reinforcement learning agent that learns to play the platformer <em>Celeste</em> from raw screen
+            pixels. An actor-critic model with a CNN chooses the inputs. A computer-vision layer tracks the
+            character and detects deaths and screen transitions, and those signals feed the reward.
           </p>
-          <ul class="tags"><li>Python</li><li>PyTorch</li><li>CNNs</li><li>Computer vision</li></ul>
+          <ul class="tags"><li>Python</li><li>TensorFlow / Keras</li><li>Reinforcement learning</li><li>OpenCV</li></ul>
         </article>
 
         <article class="project">

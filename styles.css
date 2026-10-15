@@ -350,6 +350,8 @@ h1 {
 .project h3 { color: var(--heading); font-size: 1.4rem; margin: 0 0 10px; }
 .project p { margin: 0 0 14px; }
 
+.project .note { font-family: var(--mono); font-size: 0.8rem; color: var(--text-dim); }
+
 .highlights { margin: 0 0 18px; padding-left: 0; list-style: none; }
 .highlights li { position: relative; padding-left: 22px; margin-bottom: 6px; color: var(--text); }
 .highlights li::before {
