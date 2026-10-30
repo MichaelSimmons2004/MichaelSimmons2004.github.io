@@ -11,8 +11,8 @@ Plain HTML, CSS, and JavaScript — no framework or build step. Hosted on GitHub
 | File | What it is |
 | --- | --- |
 | `index.html` | All the page content (edit this to change text, projects, links) |
-| `styles.css` | Colors, fonts, layout. Light and dark theme colors are at the top under `:root` |
-| `script.js` | Theme toggle, mobile menu, project filters, copy-email button, scroll fade-in |
+| `styles.css` | Colors, fonts, layout. The site is dark-only; all colors are at the top under `:root` |
+| `script.js` | Mobile menu, project filters, copy-email button, scroll fade-in |
 | `favicon.svg` | Browser tab icon |
 
 ## Editing
@@ -20,7 +20,7 @@ Plain HTML, CSS, and JavaScript — no framework or build step. Hosted on GitHub
 - **Add a project:** in `index.html`, find the comment `Add another project`, copy the template block, and fill it in. Set `data-cat` to any of `security ai systems web` so the filter buttons pick it up.
 - **Add a resume:** put `resume.pdf` in this folder and uncomment the Resume button in the hero.
 - **Experience:** each job is an `<li class="job">` in the `timeline` list in `index.html`; copy one to add another.
-- **Security+:** when you pass, change its badge in the certifications list from `Dec 2026` to `Earned` and add `done` to its class.
+- **Security+:** when you pass, change its status in the certifications list from `Expected December 2026` to `Earned 2026` and add `done` to its class.
 
 ## Preview locally
 
