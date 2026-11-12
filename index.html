@@ -94,8 +94,8 @@
           <span class="stat-label">Parameter mixture-of-experts model served at ~21 tokens/s on a single 12&nbsp;GB consumer GPU</span>
         </li>
         <li>
-          <span class="stat-num">28 / 28</span>
-          <span class="stat-label">Database tables protected by row-level security in a production application I security-reviewed</span>
+          <span class="stat-num">449</span>
+          <span class="stat-label">Automated tests behind a transcript-to-credential application piloted with university registrars</span>
         </li>
         <li>
           <span class="stat-num">3</span>
@@ -197,6 +197,33 @@
       </div>
 
       <div class="featured">
+        <article class="project featured-card" data-cat="ai security web">
+          <div class="project-top">
+            <p class="label">AACRAO pilot · In testing with registrars</p>
+            <a class="project-link" href="https://github.com/MichaelSimmons2004/transcript-layouts" target="_blank" rel="noopener">
+              Layout library
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </div>
+          <h3>Transcript Parser</h3>
+          <p class="summary">
+            An application that converts academic transcript PDFs from any institution, digital or scanned, into
+            structured data, verifies that credits and GPAs reconcile, and produces a 1EdTech CLR 2.0 credential
+            and a readable HTML transcript. Developed with a collaborator for an AACRAO pilot, it runs on the
+            issuing institution's own computer, where the results remain.
+          </p>
+          <dl class="detail-list">
+            <div><dt>Extraction</dt><dd>Known transcript layouts are parsed locally by rule-based layout recipes at no cost; unfamiliar layouts are read by a large language model through the Claude API, with automatic re-checks when validation fails.</dd></div>
+            <div><dt>Layout learning</dt><dd>The application learns a reusable layout from each new format. A layout is saved only after it reproduces the model's reading exactly and is screened for student information.</dd></div>
+            <div><dt>Integrity</dt><dd>Layouts are distributed through a public library with SHA-256 fingerprints and a digitally signed index; the application accepts only lists signed by trusted keys.</dd></div>
+            <div><dt>Privacy</dt><dd>An offline mode reads PDFs with layout recipes only, so nothing leaves the computer. The shared library contains formats only, never student data.</dd></div>
+            <div><dt>Delivery</dt><dd>Local Flask web application and command-line interface, packaged for Windows, macOS, and Linux through a GitHub Actions release workflow.</dd></div>
+            <div><dt>Quality</dt><dd>449 automated tests, including suites for signature verification, layout-learning safety, and web security; evaluated on 45 sample transcripts at an average of about $0.33 per AI-read transcript.</dd></div>
+          </dl>
+          <p class="tech">Python · Flask · Claude API · 1EdTech CLR 2.0 · Digital signatures · GitHub Actions</p>
+          <p class="note">Application source is private during the pilot; the layout library is public.</p>
+        </article>
+
         <article class="project featured-card" data-cat="ai systems">
           <p class="label">Independent research · Ongoing</p>
           <h3>Mixture-of-Experts Inference on Consumer GPUs</h3>
@@ -220,16 +247,16 @@
           <h3>LifeCal</h3>
           <p class="summary">
             An invite-only calendar, task, and habit-tracking progressive web app in daily use by five people.
-            Approximately 33,000 lines of TypeScript across 23 feature modules, delivered in more than 19 planned
-            phases, each with its own database migration, unit tests, and end-to-end coverage.
+            Approximately 58,000 lines of TypeScript (including tests) across 25 feature modules and 67 database
+            migrations, delivered in planned phases, each with its own migration, unit tests, and end-to-end coverage.
           </p>
           <dl class="detail-list">
             <div><dt>Security assessment</dt><dd>Conducted and documented a review of all 18 server routes, redirects, row-level security policies and grants, security-definer functions, account-deletion cascades, abuse limits, headers, dependencies, and secrets.</dd></div>
             <div><dt>Remediation</dt><dd>Removed excess anonymous grants, closed permissive child-row policies that could have allowed writes under another user's records, and eliminated residual PII after account deletion. Residual risks are documented with a remediation plan.</dd></div>
             <div><dt>Hardening</dt><dd>SSRF protection on external feed retrieval (private-address blocking re-validated after redirects, size limits, timeouts), constant-time secret comparison, Content Security Policy, and HSTS.</dd></div>
-            <div><dt>Access control</dt><dd>Per-user data isolation through row-level security on all 28 tables, with invitation gating enforced at the database layer.</dd></div>
+            <div><dt>Access control</dt><dd>Per-user data isolation through PostgreSQL row-level security, with invitation gating enforced at the database layer.</dd></div>
             <div><dt>Integrations</dt><dd>Two-way Google Calendar and Outlook synchronization over OAuth 2.0 with push webhooks, per-channel secrets, and encrypted token storage.</dd></div>
-            <div><dt>Quality</dt><dd>51 unit test suites (Vitest), Playwright end-to-end tests on a mobile profile, and Sentry error monitoring.</dd></div>
+            <div><dt>Quality</dt><dd>94 unit test suites (Vitest), Playwright end-to-end tests on a mobile profile, and Sentry error monitoring.</dd></div>
           </dl>
           <p class="tech">TypeScript · Next.js · React · Supabase · PostgreSQL · OAuth 2.0 · Vitest · Playwright · Vercel</p>
           <p class="note">Private repository; the application is invitation-only.</p>
@@ -314,6 +341,27 @@
           <p class="tech">Python · scikit-learn · XGBoost · pandas</p>
         </article>
 
+        <article class="project" data-cat="ai systems">
+          <p class="label">Automation · Personal project</p>
+          <h3>Automated Video Clipping Pipeline</h3>
+          <p>
+            An unattended pipeline that monitors channels, downloads videos and records live streams, transcribes
+            them with GPU-accelerated Whisper, selects highlights, and renders vertical clips with a
+            speaker-following crop. Includes a review queue, scheduled posting through platform APIs, and view tracking.
+          </p>
+          <p class="tech">Python · faster-whisper · MediaPipe · yt-dlp · Streamlit</p>
+        </article>
+
+        <article class="project" data-cat="systems">
+          <p class="label">Cloud · Backend</p>
+          <h3>Weather Station Reporting Service</h3>
+          <p>
+            Python backend that collects data from a WeatherFlow weather station and emails a daily report with
+            agricultural insights. Runs as an AWS Lambda function triggered by a scheduled CloudWatch event.
+          </p>
+          <p class="tech">Python · AWS Lambda · CloudWatch · REST APIs</p>
+        </article>
+
         <article class="project" data-cat="security">
           <p class="label">Competition</p>
           <h3>Los Alamos CyberFire Puzzles</h3>
@@ -345,10 +393,10 @@
 
       <dl class="skills">
         <div><dt>Languages</dt><dd>Python, C++, C, Java, TypeScript, C#, SQL, Bash, Ruby, MIPS assembly</dd></div>
-        <div><dt>Security</dt><dd>Threat modeling, vulnerability analysis, application security review, secure coding, access control and row-level security, SSRF mitigation, OAuth security, encryption (AES, Fernet), digital forensics, penetration testing, reverse engineering, static analysis, OSINT, NIST and MITRE ATT&amp;CK</dd></div>
-        <div><dt>AI and machine learning</dt><dd>PyTorch, Triton, CUDA, Hugging Face Transformers, LLM inference and GPU kernels, local LLM deployment, TensorFlow/Keras, convolutional networks and computer vision, OpenCV, reinforcement learning, CMA-ES, scikit-learn, XGBoost, pandas</dd></div>
-        <div><dt>Web and backend</dt><dd>Next.js, React, Tailwind CSS, FastAPI, Supabase, PostgreSQL, GraphQL, OAuth 2.0, webhooks, WebSockets, progressive web apps, Web Push</dd></div>
-        <div><dt>Systems and tools</dt><dd>Linux, Windows, Git, OpenStack, Ansible, Wireshark, gdb, Vercel, Sentry, Playwright, Vitest, Jupyter, Salesforce, Agile</dd></div>
+        <div><dt>Security</dt><dd>Threat modeling, vulnerability analysis, application security review, secure coding, access control and row-level security, SSRF mitigation, OAuth security, encryption (AES, Fernet), digital forensics, penetration testing, reverse engineering, static analysis, digital signatures and integrity verification, OSINT, NIST and MITRE ATT&amp;CK</dd></div>
+        <div><dt>AI and machine learning</dt><dd>PyTorch, Triton, CUDA, Hugging Face Transformers, LLM inference and GPU kernels, LLM application development (Claude API), local LLM deployment, speech-to-text (Whisper), TensorFlow/Keras, convolutional networks and computer vision, OpenCV, reinforcement learning, CMA-ES, scikit-learn, XGBoost, pandas</dd></div>
+        <div><dt>Web and backend</dt><dd>Next.js, React, Tailwind CSS, FastAPI, Flask, Supabase, PostgreSQL, GraphQL, OAuth 2.0, webhooks, WebSockets, progressive web apps, Web Push</dd></div>
+        <div><dt>Systems and tools</dt><dd>Linux, Windows, Git, GitHub Actions, AWS Lambda, OpenStack, Ansible, Wireshark, gdb, Vercel, Sentry, Playwright, Vitest, Jupyter, Salesforce, Agile</dd></div>
         <div><dt>AI-assisted development</dt><dd>Experienced with agentic AI coding tools across development, testing, code review, documentation, and automation workflows</dd></div>
       </dl>
     </section>
