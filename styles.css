@@ -325,3 +325,9 @@ em { font-style: italic; }
   .reveal { opacity: 1; transform: none; }
   .contact { background: none; }
 }
+
+/* Recommendation quote under a job */
+.recommendation { margin-top: 20px; padding: 16px 20px; border-left: 2px solid var(--accent); background: var(--accent-soft); border-radius: 0 var(--radius) var(--radius) 0; }
+.recommendation p { font-family: var(--serif); font-style: italic; color: var(--ink); line-height: 1.55; }
+.recommendation footer { margin-top: 10px; font-size: 14px; color: var(--muted); }
+.recommendation footer::before { content: "— "; }

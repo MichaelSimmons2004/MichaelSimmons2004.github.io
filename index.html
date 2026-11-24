@@ -94,7 +94,7 @@
           <span class="stat-label">Parameter mixture-of-experts model served at ~21 tokens/s on a single 12&nbsp;GB consumer GPU</span>
         </li>
         <li>
-          <span class="stat-num">449</span>
+          <span class="stat-num">476</span>
           <span class="stat-label">Automated tests behind a transcript-to-credential application piloted with university registrars</span>
         </li>
         <li>
@@ -115,6 +115,24 @@
       </header>
 
       <ol class="timeline">
+        <li class="job">
+          <p class="when">Oct 2026 – Present</p>
+          <div class="job-body">
+            <h3>Software Developer</h3>
+            <p class="org">AACRAO (American Association of Collegiate Registrars and Admissions Officers) · Remote</p>
+            <ul class="bullets">
+              <li>Primary developer of a transcript parser piloted with university registrars that converts academic transcript PDFs from any institution, digital or scanned, into structured data and 1EdTech CLR 2.0 credentials.</li>
+              <li>Built a local desktop application and a command-line tool, with installers for Windows, macOS, and Linux and continuous integration on GitHub Actions.</li>
+              <li>Designed a digitally signed library of reusable transcript layouts, with safeguards that reject untrusted keys, block rollbacks to older versions, and screen out student information.</li>
+              <li>Led a dedicated security review covering tampered-PDF protection, digital-signature verification, and the application's local web server; grew the test suite to 476 automated tests.</li>
+            </ul>
+            <blockquote class="recommendation">
+              <p>“Over about six weeks, Michael took the work from an early concept to a tested application ready to install. … He works in a disciplined, transparent way and delivers quickly without cutting corners on testing or security.”</p>
+              <footer>Mark McConahay, Senior Consultant, AACRAO</footer>
+            </blockquote>
+          </div>
+        </li>
+
         <li class="job">
           <p class="when">Aug 2025 – Present</p>
           <div class="job-body">
@@ -159,7 +177,7 @@
           <p class="when">Aug 2023 – Aug 2024</p>
           <div class="job-body">
             <h3>CDHS Programmer</h3>
-            <p class="org">Auburn University Student Space Program</p>
+            <p class="org">Auburn University Small Satellite Program (AUSSP)</p>
             <ul class="bullets">
               <li>Developed and maintained production Python systems for satellite data processing and system integration.</li>
               <li>Designed a GraphQL interface that simplified how engineers query and manage sensor and telemetry data.</li>
@@ -218,7 +236,7 @@
             <div><dt>Integrity</dt><dd>Layouts are distributed through a public library with SHA-256 fingerprints and a digitally signed index; the application accepts only lists signed by trusted keys.</dd></div>
             <div><dt>Privacy</dt><dd>An offline mode reads PDFs with layout recipes only, so nothing leaves the computer. The shared library contains formats only, never student data.</dd></div>
             <div><dt>Delivery</dt><dd>Local Flask web application and command-line interface, packaged for Windows, macOS, and Linux through a GitHub Actions release workflow.</dd></div>
-            <div><dt>Quality</dt><dd>449 automated tests, including suites for signature verification, layout-learning safety, and web security; evaluated on 45 sample transcripts at an average of about $0.33 per AI-read transcript.</dd></div>
+            <div><dt>Quality</dt><dd>476 automated tests, including suites for signature verification, layout-learning safety, and web security; evaluated on 45 sample transcripts at an average of about $0.33 per AI-read transcript.</dd></div>
           </dl>
           <p class="tech">Python · Flask · Claude API · 1EdTech CLR 2.0 · Digital signatures · GitHub Actions</p>
           <p class="note">Application source is private during the pilot; the layout library is public.</p>
@@ -243,12 +261,13 @@
         </article>
 
         <article class="project featured-card" data-cat="web security">
-          <p class="label">Full-stack application · In production</p>
-          <h3>LifeCal</h3>
+          <p class="label">Full-stack application · In production · Formerly LifeCal</p>
+          <h3>Waypoint</h3>
           <p class="summary">
-            An invite-only calendar, task, and habit-tracking progressive web app in daily use by five people.
-            Approximately 58,000 lines of TypeScript (including tests) across 25 feature modules and 67 database
-            migrations, delivered in planned phases, each with its own migration, unit tests, and end-to-end coverage.
+            An invite-only calendar, task, habit, and chore progressive web app with shared group calendars, in daily
+            use by invited users. Approximately 78,000 lines of TypeScript (including tests) across 28 feature modules
+            and 83 database migrations, delivered in planned phases, each with its own migration, unit tests, and
+            end-to-end coverage.
           </p>
           <dl class="detail-list">
             <div><dt>Security assessment</dt><dd>Conducted and documented a review of all 18 server routes, redirects, row-level security policies and grants, security-definer functions, account-deletion cascades, abuse limits, headers, dependencies, and secrets.</dd></div>
@@ -256,7 +275,7 @@
             <div><dt>Hardening</dt><dd>SSRF protection on external feed retrieval (private-address blocking re-validated after redirects, size limits, timeouts), constant-time secret comparison, Content Security Policy, and HSTS.</dd></div>
             <div><dt>Access control</dt><dd>Per-user data isolation through PostgreSQL row-level security, with invitation gating enforced at the database layer.</dd></div>
             <div><dt>Integrations</dt><dd>Two-way Google Calendar and Outlook synchronization over OAuth 2.0 with push webhooks, per-channel secrets, and encrypted token storage.</dd></div>
-            <div><dt>Quality</dt><dd>94 unit test suites (Vitest), Playwright end-to-end tests on a mobile profile, and Sentry error monitoring.</dd></div>
+            <div><dt>Quality</dt><dd>128 unit test suites (Vitest) with more than 1,400 test cases, Playwright end-to-end tests on a mobile profile, and Sentry error monitoring.</dd></div>
           </dl>
           <p class="tech">TypeScript · Next.js · React · Supabase · PostgreSQL · OAuth 2.0 · Vitest · Playwright · Vercel</p>
           <p class="note">Private repository; the application is invitation-only.</p>
